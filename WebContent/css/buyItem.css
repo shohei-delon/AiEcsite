@@ -1,6 +1,27 @@
 @CHARSET "UTF-8";
 
-.leftText {
+
+#BuyItemAction .formTable{
+	width: 400px;
+}
+
+#BuyItemAction .formTable td{
+	padding: 5px;
+}
+
+#BuyItemAction .formTable .formLeft{
+	width: 30%;
+}
+#BuyItemAction .formTable .formRight{
+	width: 70%;
+}
+
+#BuyItemAction .formTable .itemTypeRight{
+	padding-left: 50px;
+	text-align: left;
+}
+
+#BuyItemAction .leftText {
 	text-align: start;
-	padding-left: 15px;
+	padding-left: 30px;
 }

@@ -31,16 +31,19 @@
 		</div>
 		<div>
 		<s:form action="BuyItemAction">
-			<table>
+			<table class="formTable">
 				<tr>
-					<td><span>商品名</span></td>
-					<td>
-						AI機能付きイヤホンorヘッドホン<br>
+					<td colspan="2"><h3>基本情報</h3></td>
+				</tr>
+				<tr>
+					<td class="formLeft"><span>商品名</span></td>
+					<td class="formRight">
+						<p>AI機能付きイヤホンorヘッドホン</p>
 					</td>
 				</tr>
 				<tr>
-					<td><span>商品タイプ</span></td>
-					<td>
+					<td class="formLeft"><span>商品タイプ</span></td>
+					<td class="formRight">
 						<select name="itemType">
 							<option value="1" selected="selected">ヘッドホン</option>
 							<option value="2">Bluetoothヘッドホン</option>
@@ -51,28 +54,33 @@
 					</td>
 				</tr>
 				<tr>
-					<td><span>会話レベル</span></td>
-					<td class="leftText">
+					<td class="formLeft"><span>会話レベル</span></td>
+					<td class="formRight itemTypeRight">
 						<label for="talkableNo">
-							<input type="radio" name="talkable" value="0" checked="checked" id="talkableNo">Lv.0(いらない)
+							<input type="radio" name="talkable" value="0" checked="checked" id="talkableNo">
+							Lv.0(いらない)
 						</label><br>
 						<label for="talkable1">
-							<input type="radio" name="talkable" value="1" id="talkable1">Lv.1(日常会話)
+							<input type="radio" name="talkable" value="1" id="talkable1">
+							Lv.1(日常会話)
 						</label><br>
 						<label for="talkable2">
-							<input type="radio" name="talkable" value="2" id="talkable2">Lv.2(単純計算能力)
+							<input type="radio" name="talkable" value="2" id="talkable2">
+							Lv.2(単純計算能力)
 						</label><br>
 						<label for="talkable3">
-							<input type="radio" name="talkable" value="3" id="talkable3">Lv.3(百科事典能力)
+							<input type="radio" name="talkable" value="3" id="talkable3">
+							Lv.3(百科事典能力)
 						</label><br>
 						<label for="talkable4">
-							<input type="radio" name="talkable" value="4" id="talkable4">Lv.4(最近のニュース)
+							<input type="radio" name="talkable" value="4" id="talkable4">
+							Lv.4(最近のニュース)
 						</label><br>
 					</td>
 				</tr>
 				<tr>
-					<td><span>声色</span></td>
-					<td>
+					<td class="formLeft"><span>声色</span></td>
+					<td class="formRight">
 						<label for="voiceGender0">
 							<input type="radio" name="voiceGender" value="0" id="voiceGender0" checked="checked">男性
 						</label>
@@ -82,17 +90,17 @@
 					</td>
 				</tr>
 				<tr>
-					<td><span>名前</span></td>
-					<td>
-						<input type="text" name="aiName" maxlength="10">
+					<td class="formLeft"><span>名前</span></td>
+					<td class="formRight">
+						<input type="text" name="aiName" maxlength="10" placeholder="AIに名前をつけましょう">
 					</td>
 				</tr>
 				<tr>
-					<td><h3>可能技能</h3></td>
+					<td colspan="2"><h3>可能技能</h3></td>
 				</tr>
 				<tr>
-					<td><span>連絡</span></td>
-					<td>
+					<td class="formLeft"><span>連絡</span></td>
+					<td class="formRight">
 						<label for="tellable0">
 							<input type="radio" name="tellable" value="0" id="tellable0" checked="checked">できない
 						</label>
@@ -102,8 +110,8 @@
 					</td>
 				</tr>
 				<tr>
-					<td><span>カレンダー</span></td>
-					<td>
+					<td class="formLeft"><span>カレンダー</span></td>
+					<td class="formRight">
 						<label for="schedulable0">
 							<input type="radio" name="schedulable" value="0" id="schedulable0" checked="checked">できない
 						</label>
@@ -113,8 +121,8 @@
 					</td>
 				</tr>
 				<tr>
-					<td><span>アラーム</span></td>
-					<td>
+					<td class="formLeft"><span>アラーム</span></td>
+					<td class="formRight">
 						<label for="alarmable0">
 							<input type="radio" name="alarmable" value="0" id="alarmable0" checked="checked">できない
 						</label>
@@ -124,8 +132,8 @@
 					</td>
 				</tr>
 				<tr>
-					<td><span>リマインダー</span></td>
-					<td>
+					<td class="formLeft"><span>リマインダー</span></td>
+					<td class="formRight">
 						<label for="remindable0">
 							<input type="radio" name="remindable" value="0" id="remindable0" checked="checked">できない
 						</label>
@@ -135,8 +143,8 @@
 					</td>
 				</tr>
 				<tr>
-					<td><span>マップ</span></td>
-					<td>
+					<td class="formLeft"><span>マップ</span></td>
+					<td class="formRight">
 						<label for="mapable0">
 							<input type="radio" name="mapable" value="0" id="" checked="checked">できない
 						</label>
@@ -146,17 +154,26 @@
 					</td>
 				</tr>
 				<tr>
-					<td><span>ボードゲーム</span></td>
-					<td>
-						<input type="checkbox" name="skillBoardgame" value="1">将棋
-						<input type="checkbox" name="skillBoardgame" value="2">チェス<br>
-						<input type="checkbox" name="skillBoardgame" value="3">囲碁
-						<input type="checkbox" name="skillBoardgame" value="4">オセロ
+					<td class="formLeft"><span>ボードゲーム</span></td>
+					<td class="formRight">
+					<label for="skillBoardgame1">
+						<input type="checkbox" name="skillBoardgame" value="1" id="skillBoardgame1">将棋
+					</label>
+					<label for="skillBoardgame2">
+						<input type="checkbox" name="skillBoardgame" value="2" id="skillBoardgame2">チェス<br>
+					</label>
+					<label for="skillBoardgame3">
+						<input type="checkbox" name="skillBoardgame" value="3" id="skillBoardgame3">囲碁
+					</label>
+					<label for="skillBoardgame4">
+						<input type="checkbox" name="skillBoardgame" value="4" id="skillBoardgame4">オセロ
+					</label>
+
 					</td>
 				</tr>
 				<tr>
-					<td><span>購入個数</span></td>
-					<td>
+					<td class="formLeft"><span>購入個数</span></td>
+					<td class="formRight">
 						<select name="count">
 							<option value="1" selected="selected">1</option>
 							<option value="2">2</option>
@@ -167,10 +184,14 @@
 					</td>
 				</tr>
 				<tr>
-					<td><span>支払い方法</span></td>
+					<td class="formLeft"><span>支払い方法</span></td>
 					<td>
-						<input type="radio" name="pay" value="1" checked="checked">現金払い
-						<input type="radio" name="pay" value="2">クレジットカード
+						<label for="pay1">
+							<input type="radio" name="pay" value="1" id="pay1" checked="checked">現金払い
+						</label>
+						<label for="pay2">
+							<input type="radio" name="pay" value="2" id="pay2">クレジットカード
+						</label>
 					</td>
 				</tr>
 				<tr><td><s:submit value="購入" /></td></tr>
