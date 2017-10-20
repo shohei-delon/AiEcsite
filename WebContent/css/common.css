@@ -1,0 +1,61 @@
+@CHARSET "UTF-8";
+
+body {
+	position: relative;
+	margin:0;
+	padding:0;
+	top: 0;
+	width: 100%;
+	height: 100%;
+	line-height:1.6;
+	letter-spacing:1px;
+	font-family:Verdana, Helvetica, sans-serif;
+	font-size:12px;
+	color:#333;
+	background:#fff;
+}
+
+table {
+	text-align:center;
+	margin:0 auto;
+}
+
+#header {
+	display: flex;
+	justify-content: space-between;
+	align-items: flex-end;
+	z-index: 1;
+	height: 80px;
+	background-color: black;
+	color: white;
+}
+
+#header .cmpName{
+	font-size: 50px;
+	margin-left: 20px;
+}
+
+#header .logInOut{
+	margin: 0 10px 10px 0;
+	font-size: 15px;
+	text-decoration: none;
+	color: inherit;
+}
+
+#main{
+	width: 900px;
+	margin: 0 auto;
+}
+
+#top {
+   width:600px;
+   margin: 30px auto;
+   border:1px solid #333;
+   font-size: 20px;
+   text-align: center;
+}
+
+.releaseLink{
+	text-decoration:none;
+	color: inherit;
+}

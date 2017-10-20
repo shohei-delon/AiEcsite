@@ -1,0 +1,6 @@
+@CHARSET "UTF-8";
+
+.leftText {
+	text-align: start;
+	padding-left: 15px;
+}
