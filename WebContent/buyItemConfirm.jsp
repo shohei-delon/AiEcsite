@@ -27,11 +27,12 @@
 		<div class="cmpName" ><a href='<s:url action="GoHomeAction"/>' class="releaseLink">AI.inc</a></div>
 		<div class="session">
 			<s:if test="#session.user_id != null">
+				<a href='<s:url action="GoHomeAction" />' class="home">ホーム</a>
 				<a href='<s:url action="MyPageAction" />' class="myPage">マイページ</a>
 				<a href='<s:url action="LogoutAction" />' class="logInOut" >ログアウト</a>
 			</s:if>
 			<s:else>
-				<a href='<s:url action="LoginAction" />' class="logInOut" >ログイン</a>
+				<% application.getRequestDispatcher("/login.jsp").forward(request, response); %>
 			</s:else>
 		</div>
 	</header>

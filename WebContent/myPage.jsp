@@ -25,7 +25,7 @@
 				<a href='<s:url action="LogoutAction" />' class="logInOut" >ログアウト</a>
 			</s:if>
 			<s:else>
-				<a href='<s:url action="LoginAction" />' class="logInOut" >ログイン</a>
+				<% application.getRequestDispatcher("/login.jsp").forward(request, response); %>
 			</s:else>
 		</div>
 	</header>
