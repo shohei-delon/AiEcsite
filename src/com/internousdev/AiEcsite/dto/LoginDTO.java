@@ -15,6 +15,14 @@ public class LoginDTO {
 	private String userName;
 	private boolean loginFlg = false;
 
+	public LoginDTO(){}
+
+	public LoginDTO(String loginId, String loginPassword, String userName){
+		this.loginId = loginId;
+		this.loginPassword = loginPassword;
+		this.userName = userName;
+	}
+
 	public int getUserId() {
 		return userId;
 	}

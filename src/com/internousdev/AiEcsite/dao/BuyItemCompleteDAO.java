@@ -4,6 +4,7 @@ import java.sql.Connection;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.SQLException;
+import java.sql.Statement;
 import java.util.ArrayList;
 
 import com.internousdev.AiEcsite.util.DBConnector;
@@ -40,7 +41,7 @@ public class BuyItemCompleteDAO {
 			int total_price, int total_count, String pay) throws SQLException{
 
 		try{
-			PreparedStatement preparedStatement = connection.prepareStatement(sql1,java.sql.Statement.RETURN_GENERATED_KEYS);
+			PreparedStatement preparedStatement = connection.prepareStatement(sql1, Statement.RETURN_GENERATED_KEYS);
 
 			preparedStatement.setInt(1, item_type);
 			preparedStatement.setInt(2, item_talk);

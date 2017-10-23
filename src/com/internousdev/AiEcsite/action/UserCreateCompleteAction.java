@@ -9,6 +9,7 @@ import java.util.Map;
 import org.apache.struts2.interceptor.SessionAware;
 
 import com.internousdev.AiEcsite.dao.UserCreateCompleteDAO;
+import com.internousdev.AiEcsite.dto.LoginDTO;
 import com.opensymphony.xwork2.ActionSupport;
 
 /**
@@ -25,10 +26,13 @@ public class UserCreateCompleteAction extends ActionSupport implements SessionAw
 	private UserCreateCompleteDAO userCreateCompleteDAO = new UserCreateCompleteDAO();
 
 	public String execute() throws SQLException {
-		userCreateCompleteDAO.createUser(
-				createUserSession.get("loginUserId").toString(),
-				createUserSession.get("loginPassword").toString(),
-				createUserSession.get("userName").toString());
+		LoginDTO loginDTO = (LoginDTO) createUserSession.get("loginDTO");
+		int id = userCreateCompleteDAO.createUser(
+					loginDTO.getLoginId(),
+					loginDTO.getLoginPassword(),
+					loginDTO.getUserName());
+
+		createUserSession.put("user_id", id);
 
 		result = SUCCESS;
 		return result;

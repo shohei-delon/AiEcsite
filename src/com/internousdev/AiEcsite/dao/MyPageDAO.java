@@ -90,11 +90,15 @@ public class MyPageDAO {
 		dto.setAlarmable(ValidationUtil.yesNo(resultSet.getBoolean("item_alarm")));
 		dto.setRemindable(ValidationUtil.yesNo(resultSet.getBoolean("item_remind")));
 		dto.setMapable(ValidationUtil.yesNo(resultSet.getBoolean("item_map")));
-		dto.setSkillBoardgame(resultSet.getString("board_name"));
 		dto.setTotalPrice(resultSet.getInt("total_price"));
 		dto.setCount(resultSet.getInt("total_count"));
 		dto.setPay(resultSet.getString("pay"));
 		dto.setInsertDate(resultSet.getString("insert_date"));
+		if(resultSet.getString("board_name") == null){
+			dto.setSkillBoardgame("無し");
+		}else{
+			dto.setSkillBoardgame(resultSet.getString("board_name"));
+		}
 		return dto;
 	}
 

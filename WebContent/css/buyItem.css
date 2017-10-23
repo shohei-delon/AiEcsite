@@ -25,3 +25,11 @@
 	text-align: start;
 	padding-left: 30px;
 }
+
+#BuyItemAction input[type="button"]{
+	cursor: pointer;
+}
+
+.completeMessage{
+	text-align: center;
+}

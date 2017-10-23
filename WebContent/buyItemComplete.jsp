@@ -16,15 +16,23 @@
 	<link rel="stylesheet" href="./css/buyItem.css">
 </head>
 <body>
-	<div id="header">
-	 	<div id="pr">
+	<header id="header">
+		<div class="cmpName" ><a href='<s:url action="GoHomeAction"/>' class="releaseLink">AI.inc</a></div>
+		<div class="session">
+			<s:if test="#session.user_id != null">
+				<a href='<s:url action="MyPageAction" />' class="myPage">マイページ</a>
+				<a href='<s:url action="LogoutAction" />' class="logInOut" >ログアウト</a>
+			</s:if>
+			<s:else>
+				<a href='<s:url action="LoginAction" />' class="logInOut" >ログイン</a>
+			</s:else>
 		</div>
-	</div>
+	</header>
 	<div id="main">
 		<div id="top">
 			<p>BuyItemComplate</p>
 		</div>
-		<div>
+		<div class="completeMessage">
 			<p>購入手続きが完了致しました。</p>
 			<div>
 				<a href='<s:url action="MyPageAction" />'>マイページ</a><span>から購入履歴の確認が可能です。</span>

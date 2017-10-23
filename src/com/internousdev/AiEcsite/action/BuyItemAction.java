@@ -36,6 +36,7 @@ public class BuyItemAction extends ActionSupport implements SessionAware {
 	public Map<String, Object> buyItemInfoMap = new HashMap<>();
 	private BuyItemDTO buyItemDTO = new BuyItemDTO();
 	private String result;
+	public String message;
 
 	public String execute(){
 		result = SUCCESS;
@@ -47,6 +48,10 @@ public class BuyItemAction extends ActionSupport implements SessionAware {
 		return result;
 	}
 
+	public void print(){
+		System.out.println(buyItemInfoMap.get("user_id"));
+	}
+
 	private void presetMap(){
 		buyItemDTO.setItemType(itemType);
 		buyItemDTO.setTalkable(talkable);
@@ -54,7 +59,7 @@ public class BuyItemAction extends ActionSupport implements SessionAware {
 		if(!aiName.isEmpty()){
 			buyItemDTO.setAiName(aiName);
 		}else{
-			result = ERROR;
+			setError("名前が未入力です。");
 		}
 		buyItemDTO.setTellable(ValidationUtil.intToBool(tellable));
 		buyItemDTO.setSchedulable(ValidationUtil.intToBool(schedulable));
@@ -88,6 +93,11 @@ public class BuyItemAction extends ActionSupport implements SessionAware {
 			price += this.skillBoardgame.length * 10000;
 		}
 		return price;
+	}
+
+	private void setError(String message){
+		result = ERROR;
+		this.message = message;
 	}
 
 	/*

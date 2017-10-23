@@ -1,7 +1,7 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
     <%@ taglib prefix="s" uri="/struts-tags" %>
-<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<!DOCTYPE html>
 <html>
 <head>
 	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
@@ -11,61 +11,21 @@
 	<meta name="description" content="" />
 	<meta name="keywords" content="" />
 	<title>UserCreate画面</title>
-	<style type="text/css">
-		/* ========TAG LAYOUT======== */
-		body {
-		   margin:0;
-		   padding:0;
-		   line-height:1.6;
-		   letter-spacing:1px;
-		   font-family:Verdana, Helvetica, sans-serif;
-		   font-size:12px;
-		   color:#333;
-		   background:#fff;
-		}
-
-		table {
-			text-align:center;
-			margin:0 auto;
-		}
-
-		/* ========ID LAYOUT======== */
-		#top {
-		   width:780px;
-		   margin:30px auto;
-		   border:1px solid #333;
-		}
-
-		#header {
-		   width: 100%;
-		   height: 80px;
-		   background-color: black;
-		}
-
-		#main {
-		   width: 100%;
-		   height: 500px;
-		   text-align: center;
-		}
-
-		#footer {
-			width: 100%;
-			height: 80px;
-			background-color: black;
-			clear:both;
-		}
-	</style>
+	<link rel="stylesheet" href="./css/common.css">
+	<link rel="stylesheet" href="./css/createUser.css">
 </head>
 <body>
-	<div id="header">
-	 	<div id="pr">
+	<header id="header">
+		<div class="cmpName" ><a href='<s:url action="GoHomeAction"/>' class="releaseLink">AI.inc</a></div>
+		<div class="session">
+			<a href='<s:url action="GoHomeAction" />' class="home_c">ホーム</a>
 		</div>
-	</div>
+	</header>
 	<div id="main">
 		<div id="top">
 			<p>UserCreate</p>
 		</div>
-		<div>
+		<div class="message">
 			<s:if test="errorMessage !=''">
 				<s:property value="errorMessage" escape="false" />
 			</s:if>
@@ -86,9 +46,6 @@
 					<s:submit value="登録"/>
 				</s:form>
 			</table>
-			<div>
-				<span>前画面に戻る場合は</span><a href='<s:url action="HomeAction" />'>こちら</a>
-			</div>
 		</div>
 	</div>
 </body>

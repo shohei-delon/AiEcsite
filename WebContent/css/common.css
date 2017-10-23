@@ -35,9 +35,38 @@ table {
 	margin-left: 20px;
 }
 
-#header .logInOut{
+#header .session{
 	margin: 0 10px 10px 0;
 	font-size: 15px;
+}
+
+#header .session .home{
+	text-decoration: none;
+	color: inherit;
+	border-right: 1px solid #fff;
+	padding-right: 5px;
+}
+
+#header .session .home_c{
+	text-decoration: none;
+	color: inherit;
+}
+
+#header .session .myPage{
+	text-decoration: none;
+	color: inherit;
+	border-right: 1px solid #fff;
+	padding-right: 5px;
+}
+
+#header .session .new{
+	text-decoration: none;
+	color: inherit;
+	border-right: 1px solid #fff;
+	padding-right: 5px;
+}
+
+#header .session .logInOut{
 	text-decoration: none;
 	color: inherit;
 }

@@ -24,7 +24,6 @@ public class BuyItemConfirmAction extends ActionSupport implements SessionAware 
 	public BuyItemCompleteDAO buyItemCompleteDAO = new BuyItemCompleteDAO();
 
 	public String execute() throws SQLException{
-
 		BuyItemDTO buyItemDTO = (BuyItemDTO) buyItemInfoSession.get("buyItemDTO");
 		buyItemCompleteDAO.buyItemInfo(
 				buyItemDTO.getItemType(),

@@ -18,12 +18,15 @@
 <body>
 	<header id="header">
 		<div class="cmpName" ><a href='<s:url action="GoHomeAction"/>' class="releaseLink">AI.inc</a></div>
-		<s:if test="#session.user_id != null">
-			<a href='<s:url action="LogoutAction" />' class="logInOut" >ログアウト</a>
-		</s:if>
-		<s:else>
-			<jsp:forward page="login.jsp" />
-		</s:else>
+		<div class="session">
+			<s:if test="#session.user_id != null">
+				<a href='<s:url action="MyPageAction" />' class="myPage">マイページ</a>
+				<a href='<s:url action="LogoutAction" />' class="logInOut" >ログアウト</a>
+			</s:if>
+			<s:else>
+				<a href='<s:url action="LoginAction" />' class="logInOut" >ログイン</a>
+			</s:else>
+		</div>
 	</header>
 	<div id="main">
 		<div id="top">
@@ -32,6 +35,13 @@
 		<div>
 		<s:form action="BuyItemAction">
 			<table class="formTable">
+				<tr>
+					<td colspan="2">
+						<s:if test="message !=''">
+							<s:property value="message" escape="false" />
+						</s:if>
+					</td>
+				</tr>
 				<tr>
 					<td colspan="2"><h3>基本情報</h3></td>
 				</tr>

@@ -8,6 +8,7 @@ import java.util.Map;
 
 import org.apache.struts2.interceptor.SessionAware;
 
+import com.internousdev.AiEcsite.dto.LoginDTO;
 import com.opensymphony.xwork2.ActionSupport;
 
 /**
@@ -26,15 +27,12 @@ public class UserCreateConfirmAction extends ActionSupport implements SessionAwa
 		result = ERROR;
 
 		if(!(loginUserId.equals(""))&& !(loginPassword.equals("")) && !(userName.equals(""))){
-			createUserSession.put("loginUserId", loginUserId);
-			createUserSession.put("loginPassword", loginPassword);
-			createUserSession.put("userName", userName);
+			createUserSession.put("loginDTO", new LoginDTO(loginUserId, loginPassword, userName));
 			result=SUCCESS;
 		}else{
 			errorMessage = "未入力の項目があります。";
 			result = ERROR;
 		}
-		System.out.println(createUserSession);
 		return result;
 	}
 
